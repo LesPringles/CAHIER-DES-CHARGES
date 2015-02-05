@@ -1,0 +1,137 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+
+
+\pagestyle{fancy}
+\lhead{Les Pringles} 
+\rhead{Projet Apéro} 
+\lfoot{Cahier des charges} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+\title{CAHIER DES CHARGES}
+\author{Projet Apéro \\ \\ PREVOT Charles \\ FERVEUR Corentin \\ NGUYEN Thomas \\ AUDINET Guillaume}
+\date{06 Février 2015}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Ce document est le cahier des charges du projet Apéro des Pringles sur une durée d'un semestre.
+L'objectif du cahier des charges est de définir les limites du projet en fonction du temps. \\
+
+Au fil du document, nous détaillons la composition de notre groupe, la répartition des tâches, les difficultés à relever ainsi que leurs pistes de résolution, la planification des étapes clés à réaliser.\\
+
+\section{Présentation}
+Dans le cadre de notre projet informatique de deuxième année à EPITA, le sujet du projet est libre. Il y a cependant quelques contraintes : le programme doit être réaliser en langage C et par groupe de quatre personnes sur une durée de 4 mois. Nous avons décidé de faire un logiciel de trading automatique, c'est-à-dire un programme capable d'intervenir sur les marchés finances en décidant par lui-même si une action doit être achetée ou vendue. Bien évidemment cette décision doit être prise dans le sens bénéfique pour le propriétaire du programme, c'est-à-dire générer du profit. Aujourd'hui, la mageure partie des ordres passés en bourse sont passés par ce genre de logiciel. En effet, les Hedges Founds et autres sociétés spécialisées dans le conseil boursier tentent de prédire les futurs cours de bourse grâce à des algorithmes extrêmement complexes. Beaucoup de personne l'ignore, mais aujourd'hui, une grosse partie du travail d'un trader est de développer son propre algorithme de trading et de l'améliorer au fil du temps. Devant les profits colossales générés par certains Hegdes Founds à succès, nous sommes intéressés par la difficultés que représente une telle entreprise. Non sans ambitions de réaliser certain profits, nous pensons tout de même que la tâche sera ardue, mais pas irréalisable.
+
+\newpage
+
+\section {Le groupe}
+
+\subsection{Charles PREVOT}
+
+Le numérique est pour moi une forme d'expression explicite. Á l'heure d'un monde de plus en plus numérisé, le virtuel autorise nos idées à se développer plus vite qu'on ne les a créer. Passionné, je me forme en autodidacte au langage C et Java. Je réalise seul plusieurs petits projets comme un jeu vidéo et des sites web, non sans grande ambition. Je me dirige ensuite rapidement vers l'EPITA pour parfaire mes connaissances et me spécialiser dans ce vaste domaine pour faire d'une passion un métier. Je me suis passionné de finance et pense peut être à me diriger vers ce monde pendant et après mes études.
+
+
+\subsection{Corentin FERVEUR}
+
+Parmis mes hobbies, l'informatique y joue un rôle important. C'est une manière pour moi de penser différement. Car j'aime beaucoup réfléchire à un problème pour le résoudre. Intégrer EPITA est pour moi l'occasion de concrétiser un hobby en quelque chose d'utile. Je suis prêt à m'investir que ça soit pour un projet personnel ou en groupe.
+
+\subsection{Thomas NGUYEN}
+
+Passioné par l'informatique et les nouvelles technologies depuis mon plus jeune âge, j'ai décidé d'intégrer EPITA dans l'optique d'en apprendre plus sur ma passion ainsi que de mener à bien des projets en groupe. Pour cela, la communication entre les membres du groupe est indispensable ce qui me plait car j'appécie travailler en groupe, avoir un objectif commun et apporter ma pierre à l'édifice dans un projet concret et utile par son but ou de par l'expérience qu'il pourra m'apporter.
+
+\newpage
+
+\subsection{Guillaume AUDINET}
+
+Salut, je m'appelle Guillaume Audinet, j'ai 20 ans. Je joue au rugby depuis que j'ai 5 ans à Gif sur Yvette principalement mais j'ai aussi jouer durant 2 années au Racing-Métro 92 avec les -17 ans. J'aime beaucoup voyager, d'ailleurs le semestre à l'international, que j'ai effectué au Canada, a été très enrichissant malgré mon redoublement. J'espère pouvoir y retourner prochainement.
+J'ai aussi créer avec l'aide mon frère une équipe de Rugby à 7, il y a maintenant 2 ans, et c'est aujourd'hui une équipe qui tourne très bien puisque nous participons chaque année à quelque 6 tournois dont au moins 2 à l'international.
+Bref, vous l'aurez compris, j'adore le sport et j'y consacre beaucoup de temps.
+
+\newpage
+
+\section{Les stratégies de trading}
+
+Dans cette partie, nous évoquerons brièvement les stratégies couramment utilisées dans le monde du trading. 
+
+\subsection{L'analyse fondamentale}
+Le but de l'analyse fondamentale est d'évaluer au plus juste la valeur d'une société ou d'un secteur d'activité. L'évaluation d'une société ne passe pas uniquement par l'analyse de son bilan et de son compte de résultat. En plus de cette analyse comptable et financière viendront se greffer d'autres études telles que l'analyse stratégique visant à déterminer par exemple le positionnement de la société dans son environnement concurrentiel ou à son secteur d'activité, une étude de la politique des ressources humaines dans l'entreprise, pour estimer ses perspectives de croissance en fonction des marchés qu'elle aborde ou des investissements qu'elle réalise. 
+
+Ces nombreux éléments interviennent dans la détermination de la valorisation théorique d'une société. Cette valorisation théorique est comparée au cours de bourse actuelle et permet de constater des sur/sous-valorisation. Avec ces données en main on peut alors décider d'investir en connaissance de cause. 
+
+Dans le cadre d'algorithme automatique, il est possible mais difficile d'utiliser ces études comme base de donnée car difficile d'accès. Les sociétés cotées en bourse sont légalement tenues de faire des bilans publiés publiquement, mais aucune entreprise ne respect une structure. Toutes les données sont à extraire à la main, ou via des algorithmes fastidieux et peu fiables. L'analyse fondamentale n'étudie pas le cours de l'action qui est pourtant un critère décisionnel important.
+
+\subsection{L'analyse technique (ou l'analyse graphique)}
+Contrairement à l'analyse fondamentale, l'analyse technique se base uniquement sur le graphique du prix en fonction du temps d'une action. L'idée de cette stratégie est extrêment simple : elle consiste à lire le passé pour prédire le futur. Cependant, un événement est unique et ne se produit jamais exactement deux fois de la même façon. On peut en revanche essayer de faire des approximations plus ou moins précises. 
+
+Par exemple les moyennes mobiles sont toujours citées par ceux qui pratiquent l'analyse technique. Lorsque la moyenne courte MMA20 (Moyenne Mobile Arithmétique des cours de clôture calculée sur 20 jours) vient couper la moyenne longue MMA50 en passant au-dessus de cette MMA50, alors la valeur entame un cycle de hausse : il faut acheter. Ces algorithmes sont extrêmement simples et bien évidemment peu fiables. Il peuvent cependant aider à prendre des décisions de prise de position d'achat ou de vente avec du flair et en complément d'autres techniques. 
+
+Avant que les ordinateurs se vulgarisent, il fallait faire les choses à la main. Les moyennes mobiles étaient alors une technique assez moderne. Pour les programmes de trading automatiques, cette stratégie est encore utilisée, aussi bien par les traders professionnels que par les boursicoteurs. Mais depuis la multiplicateur de nos capacités de calcul grâce à l'informatique, un nouveau modèle commence à émerger dans les algorithmes des Hedges Founds.
+
+\subsection{Les réseaux de neurones et les algorithmes génétiques}
+
+Le réseau de neurone repose sur une structure de neurones avec un réseau et des données (taux de chômage, évolution des prix des obligations, inflation, cours de bourses, etc...). Chaque neurone reçoit en “entrée” lesdites données qui agissent comme des stimulis, sur le même principe que les neurones biologiques. Ces neurones pondèrent chacune des données par un coefficient et envoient un signal si le stimuli dépasse un certain seuil. Le coefficient est adapté ensuite en fonction de la “sortie”, c’est-à-dire des décisions d’achat ou de vente prises en conséquences, et ainsi de suite, avec un renforcement du coefficient des éléments pertinents, au détriment de ceux qui ne le sont pas. Le réseau de neurones fait le tri lui-même, établit ses propres paramètres en fonction des données testées.
+
+La différence et la confusion parfois faite avec les algorithmes génétiques n’est pas simple à comprendre, d’autant que les deux sont souvent associés. Les algorithmes génétiques comme les réseaux de neurones sont, après tout, basés dans les deux cas sur la théorie de l’évolution, les réseaux de neurones devant trouver les meilleures solutions pour se “survivre à eux-mêmes”. Les algorithmes génétiques permettent de ne pas passer par la force brut. On part d’une stratégie plus ou moins faite au hasard, puis on fait évoluer les paramètres. Les paramètres produisant de bons résultats survivent et se reproduisent. Les autres disparaissent. C’est vraiment l’évolutionnisme appliqué aux algorithmes.
+
+\newpage
+
+\section{Découpage du projet}
+
+-Récupération des cours de bourse sur internet mise à jour fréquente
+-Algorithme technique (~40)
+-Interface graphique 
+-Site web
+-Reseau de neurone 
+-Algorithme génétique 
+-
+
+\newpage
+
+\subsection{Répartition des tâches}
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+Tâches & Guillaume & Corentin & Thomas & Charles\\
+\hline
+Algorithme génétique & & & & \\
+\hline
+Réseaux de neurones & & & & \\
+\hline
+Algorithmes techniques & & X & X & \\
+\hline
+Récupération de la base de donnée & X & & X & X \\
+\hline
+Interface Graphique & X & & X &\\
+\hline
+Site web & X & X & &\\
+\hline
+Latex & X & X & X & X \\
+\hline 
+\end{tabular}
+
+\section{Matériel utilisé}
+
+Pour ce projet, nous aurons besoin de plusieurs outils afin de le mener à bien. Nous utiliserons un gestionnaire de version ce qui nous permettera de suivre l'évolution de notre projet. Cela nous sera utile pour gérer le temps dont nous disposons. Dans le cadre de la récupération d'une musique, il se peut que nous recueillons le son depuis une source extérieure. De ce fait, il faudra nous munir d'un microphone. Bien que le sujet soit libre, il nous est imposé de le coder en C. Nous utiliserons bien entendu internet afin d'étendre nos connaissances sur le sujet de notre projet. Bien évidement le projet devra être capable de fonctionner sur nos racks.
+
+\end{document}
+
+projet2.tex
+
+xdvi projet2.tex
