@@ -38,26 +38,26 @@ L'objectif du cahier des charges est de définir les limites du projet en foncti
 Au fil du document, nous détaillons la composition de notre groupe, la répartition des tâches, les difficultés à relever ainsi que leurs pistes de résolution, la planification des étapes clés à réaliser.\\
 
 \section{Présentation}
-Dans le cadre de notre projet informatique de deuxième année à EPITA, le sujet du projet est libre. Il y a cependant quelques contraintes : le programme doit être réaliser en langage C et par groupe de quatre personnes sur une durée de 4 mois. Nous avons décidé de faire un logiciel de trading automatique, c'est-à-dire un programme capable d'intervenir sur les marchés finances en décidant par lui-même si une action doit être achetée ou vendue. Bien évidemment cette décision doit être prise dans le sens bénéfique pour le propriétaire du programme, c'est-à-dire générer du profit. Aujourd'hui, la majeure partie des ordres passés en bourse sont passés par ce genre de logiciel. En effet, les Hedges Founds et autres sociétés spécialisées dans le conseil boursier tentent de prédire les futurs cours de bourse grâce à des algorithmes extrêmement complexes. Beaucoup de personne l'ignore, mais aujourd'hui, une grosse partie du travail d'un trader est de développer son propre algorithme de trading et de l'améliorer au fil du temps. Devant les profits colossales générés par certains Hegdes Founds à succès, nous sommes intéressés par la difficultés que représente une telle entreprise. Non sans ambitions de réaliser certain profits, nous pensons tout de même que la tâche sera ardue, mais pas irréalisable.
+Dans le cadre de notre projet informatique de deuxième année à ÉPITA, le sujet du projet est libre. Il y a cependant quelques contraintes : le programme doit être réaliser en langage C et par groupe de quatre personnes sur une durée de 4 mois. Nous avons décidé de faire un logiciel de trading automatique, c'est-à-dire un programme capable d'intervenir sur les marchés finances en décidant par lui-même si une action doit être achetée ou vendue. Bien évidemment cette décision doit être prise dans le sens bénéfique pour le propriétaire du programme, c'est-à-dire générer du profit. Aujourd'hui, la majeure partie des ordres passés en bourse sont passés par ce genre de logiciel. En effet, les Hedges Founds et autres sociétés spécialisées dans le conseil boursier tentent de prédire les futurs cours de bourse grâce à des algorithmes extrêmement complexes. Beaucoup de personne l'ignore, mais aujourd'hui, une grosse partie du travail d'un trader est de développer son propre algorithme de trading et de l'améliorer au fil du temps. Devant les profits colossales générés par certains Hegdes Founds à succès, nous sommes intéressés par la difficultés que représente une telle entreprise. Non sans ambitions de réaliser certain profits, nous pensons tout de même que la tâche sera ardue, mais pas irréalisable.
 
 \newpage
 
 \section {Le groupe}
 
-\subsection{Charles PREVOT}
+\subsection{Charles PRÉVÔT}
 
-Le numérique est pour moi une forme d'expression explicite. Á l'heure d'un monde de plus en plus numérisé, le virtuel autorise nos idées à se développer plus vite qu'on ne les a créer. Passionné, je me forme en autodidacte au langage C et Java. Je réalise seul plusieurs petits projets comme un jeu vidéo et des sites web, non sans grande ambition. Je me dirige ensuite rapidement vers l'EPITA pour parfaire mes connaissances et me spécialiser dans ce vaste domaine pour faire d'une passion un métier. Je me suis passionné de finance et pense peut être à me diriger vers ce monde pendant et après mes études.
+Le numérique est pour moi une forme d'expression explicite. Á l'heure d'un monde de plus en plus numérisé, le virtuel autorise nos idées à se développer plus vite qu'on ne les a créer. Passionné, je me forme en autodidacte au langage C et Java. Je réalise seul plusieurs petits projets comme un jeu vidéo et des sites web, non sans grande ambition. Je me dirige ensuite rapidement vers l'ÉPITA pour parfaire mes connaissances et me spécialiser dans ce vaste domaine pour faire d'une passion un métier. Je me suis passionné de finance et pense peut être à me diriger vers ce monde pendant et après mes études.
 
 
 \subsection{Corentin FERVEUR}
 
 Parmi mes hobbies, l'informatique y joue un rôle important. C'est une manière pour moi de penser différemment. Car j'aime beaucoup réfléchir à un problème pour le résoudre. Intégrer EPITA est pour moi l'occasion de concrétiser un hobby en quelque chose d'utile. Je suis prêt à m'investir que ça soit pour un projet personnel ou en groupe.
 
+\newpage
+
 \subsection{Thomas NGUYEN}
 
 Passionné par l'informatique et les nouvelles technologies depuis mon plus jeune âge, j'ai décidé d'intégrer EPITA dans l'optique d'en apprendre plus sur ma passion ainsi que de mener à bien des projets en groupe. Pour cela, la communication entre les membres du groupe est indispensable ce qui me plaît car j'apprécie travailler en groupe, avoir un objectif commun et apporter ma pierre à l'édifice dans un projet concret et utile par son but ou de par l'expérience qu'il pourra m'apporter.
-
-\newpage
 
 \subsection{Guillaume AUDINET}
 
@@ -89,9 +89,9 @@ Avant que les ordinateurs se vulgarisent, il fallait faire les choses à la main
 
 Le réseau de neurone repose sur une structure de neurones avec un réseau et des données (taux de chômage, évolution des prix des obligations, inflation, cours de bourses, etc...). Chaque neurone reçoit en “entrée” lesdites données qui agissent comme des stimulis, sur le même principe que les neurones biologiques. Ces neurones pondèrent chacune des données par un coefficient et envoient un signal si le stimuli dépasse un certain seuil. Le coefficient est adapté ensuite en fonction de la “sortie”, c’est-à-dire des décisions d’achat ou de vente prises en conséquences, et ainsi de suite, avec un renforcement du coefficient des éléments pertinents, au détriment de ceux qui ne le sont pas. Le réseau de neurones fait le tri lui-même, établit ses propres paramètres en fonction des données testées.
 
-La différence et la confusion parfois faite avec les algorithmes génétiques n’est pas simple à comprendre, d’autant que les deux sont souvent associés. Les algorithmes génétiques comme les réseaux de neurones sont, après tout, basés dans les deux cas sur la théorie de l’évolution, les réseaux de neurones devant trouver les meilleures solutions pour se “survivre à eux-mêmes”. Les algorithmes génétiques permettent de ne pas passer par la force brut. On part d’une stratégie plus ou moins faite au hasard, puis on fait évoluer les paramètres. Les paramètres produisant de bons résultats survivent et se reproduisent. Les autres disparaissent. C’est vraiment l’évolutionnisme appliqué aux algorithmes.
+La différence et la confusion parfois faite avec les algorithmes génétiques n’est pas simple à comprendre, d’autant que les deux sont souvent associés. Les algorithmes génétiques comme les réseaux de neurones sont, après tout, basés dans les deux cas sur la théorie de l’évolution, les réseaux de neurones devant trouver les meilleures solutions pour se “survivre à eux-mêmes”. Les algorithmes génétiques permettent de ne pas passer par la force brut. On part d’une stratégie plus ou moins faite au hasard, puis on fait évoluer les paramètres. Les paramètres produisant de bons résultats survivent et se reproduisent. Les autres disparaissent. C’est vraiment l’évolutionnisme appliqué aux algorithmes. \\
 
-\newpage
+Pour ce qui est des différents types de réseaux de neurones, les expériences menées en prévisions et trading sur forex indique que les Higher Order Neural Networks (HONN) et les Multilayer Perceptron (MLP), alliés à diverses techniques statistiques ou techniques, réussissent mieux que les autres types de réseaux de neurones, comme le réseau de neurones récurrents. Nous nous orienterons donc dans cette voie.
 
 \section{Découpage du projet}
 
@@ -101,9 +101,6 @@ La différence et la confusion parfois faite avec les algorithmes génétiques n
 -Site web
 -Réseau de neurone 
 -Algorithme génétique 
--
-
-\newpage
 
 \subsection{Répartition des tâches}
 \begin{tabular}{|c||c|c|c|c|}
