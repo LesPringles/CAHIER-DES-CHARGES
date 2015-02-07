@@ -94,37 +94,47 @@ La différence et la confusion parfois faite avec les algorithmes génétiques n
 
 Pour ce qui est des différents types de réseaux de neurones, les expériences menées en prévisions et trading sur forex indique que les Higher Order Neural Networks (HONN) et les Multilayer Perceptron (MLP), alliés à diverses techniques statistiques ou techniques, réussissent mieux que les autres types de réseaux de neurones, comme le réseau de neurones récurrents. Nous nous orienterons donc dans cette voie.
 
-\section{Les contraintes et les difficultés}
-
-% TODO
-
 \section{Les objectifs}
 
-%TODO
+Nous nous fixons pour objectif de programmer un logiciel d'aide de prise de décision pour le trading. Nous utiliserons plusieurs des méthodes citées dans la partie sur les stratégies utilisées dans le trading. Dans un premier temps, on réduira notre champ d'application uniquement sur les actions du CAC40. On implémentera une vingtaine d'algorithmes issus de l'analyse technique, calculée en temps réel sur les valeurs récupérées depuis internet à interval de temps régulier. Chaque action présentée dans le logiciel possédera aussi son analyse fondamentale (bilan financier, dette, trésorie, etc). Le tout sera présenté dans une interface graphique. L'objectif à terme sera d'exposer s'il faut acheter ou pas l'action sélectionnée et éventuellement pourquoi. Pour atteindre ce dernier résultat on aura besoin d'un système décisionnel automatique basé sur les réseaux de neurones prenant en entrée tous les indicateurs calculés, tout comme le ferait un trader pour un achat moyen ou long terme. En effet, notre but n'est pas de faire du trading haute fréquence. Enfin pour tester les performances de nos algorithmes, un module simulera des conditions d'achat et de vente réels. 
+
+\section{Les contraintes et les difficultés}
+
+Les réseaux de neurones et les algorithmes génétiques sont complexes et récents dans l'histoire de l'informatique. Cependant les ouvrages et documents sont nombreux et facile d'accès pour un épiteen de seconde année. Seuls les Hedges Founds à la pointe de la technologies utilisent les réseaux de neurones dans leurs systèmes décisionnels automatiques. En effet, les réseaux de neurones sont pour le moment encore peu utilisé dans le monde trading comparer au nombre d'acteur. Il commence néanmoins à faire leur chemin dans cette voie, donc les exemples d'applications sont encore peu nombreux et jalousement garder par leurs concepteurs. La difficultés de la conception d'un algorithme capable de toujours gagner en trading est quasiment infinie. On tentera de faire au mieux pour ne pas perdre tout le temps de l'argent.
+
+\newpage
 
 \section{Découpage du projet}
 
--Récupération des cours de bourse sur internet mise à jour fréquente
--Algorithme technique (~40)
--Interface graphique 
--Site web
--Réseau de neurone 
--Algorithme génétique 
+À partir de nos objectifs, nous avons dessiner un plan permettant le découpage du projet en plusieurs parties : 
+
+\begin{itemize}
+\item Récupération des cours de bourse sur internet
+\item Algorithmes techniques (environ 25)
+\item Récupération des divers données sur la société pour l'analyse fondamentale
+\item Module de simulation
+\item Réseaux de neurones MLP et HONN
+\item Algorithmes génétiques
+\item Interface graphique
+\item Présentation des résultats sur un site Web
+\end{itemize}
 
 \subsection{Répartition des tâches}
 \begin{tabular}{|c||c|c|c|c|}
 \hline
 Tâches & Guillaume & Corentin & Thomas & Charles\\
 \hline
-Algorithme génétique & & & & \\
+Algorithmes génétiques & & X & X & X \\
 \hline
-Réseaux de neurones & & & & \\
+Réseaux de neurones & X & & X & X \\
 \hline
 Algorithmes techniques & & X & X & \\
 \hline
-Récupération de la base de donnée & X & & X & X \\
+Récupération des base de donnée & X & X & & X \\
 \hline
-Interface Graphique & X & & X &\\
+Module de simulation & X & X & & \\
+\hline
+Interface Graphique & & & X & X \\
 \hline
 Site web & X & X & &\\
 \hline
